@@ -4,6 +4,7 @@ tftproot=$(bashio::config 'tftproot')
 pidfile=/tmp/tftp-pidfile.pid
 
 echo "Starting tftpd..."
-/usr/sbin/in.tftpd --verbose --foreground --verbose --secure --pidfile ${pidfile} --address :69 ${pidfile}
+/usr/sbin/in.tftpd --verbose --foreground --verbose --secure --map-file /etc/tftp.map --address :69 $tftproot}
 
+# /usr/sbin/in.tftpd --verbose --foreground --verbose --secure --pidfile ${pidfile} --map-file /etc/tftp.map --address :69 $tftproot}
 # wait "$(cat ${pidfile})"

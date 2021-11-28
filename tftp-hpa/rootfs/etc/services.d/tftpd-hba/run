@@ -1,0 +1,9 @@
+#!/usr/bin/env bashio
+networks=$(bashio::config 'networks')
+tftproot=$(bashio::config 'tftproot')
+pidfile=/tmp/tftpd.pid
+
+echo "Starting tftpd..."
+/usr/sbin/in.tftpd --listen --verbose --pidfile ${pidfile} --address :69 ${pidfile}
+
+wait "$(cat ${pidfile})"

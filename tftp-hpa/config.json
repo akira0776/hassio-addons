@@ -8,8 +8,7 @@
     "startup": "system",
     "boot": "auto",
     "map": ["share:rw"],
-    "services": {
-      "tftpd-hba": "provide"
+    "services": [ "tftpd-hba" ],
     },
     "options": {
       "tftproot": "/share/tftp",

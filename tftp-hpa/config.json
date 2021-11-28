@@ -6,6 +6,7 @@
     "url": "https://github.com/akira0776/hassio-addons/tree/main/tftp-hpa",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "startup": "application",
+    "ingress": true,
     "boot": "auto",
     "map": ["share:rw"],
     "options": {

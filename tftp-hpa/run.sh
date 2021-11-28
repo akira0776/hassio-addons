@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
-
 CONFIG_PATH=/data/options.json
-
+tftproot=USERNAME=$(jq --raw-output '.username // empty' ${CONFIG_PATH})
 tftproot=USERNAME=$(jq --raw-output '.username // empty' ${CONFIG_PATH})
 
 echo "root is : ${tftproot}"

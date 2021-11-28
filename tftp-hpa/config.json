@@ -1,32 +1,26 @@
   {
-    "name": "tftp server",
+    "name": "TFTP Server",
     "version": "1.0",
     "slug": "tftp-server",
     "description": "TFTP Server",
-    "url": "http://192.168.123.4/hassio-addons/tree/master/tftp-hpa",
+    "url": "https://github.com/akira0776/hassio-addons/tree/main/tftp-hpa",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "startup": "application",
     "boot": "auto",
-    "map": ["share:rw", "media:rw", "ssl"],
+    "map": ["share:rw", "media:rw"],
     "ingress": true,
-    "panel_icon": "mdi:web-box",
     "options": {
-      "document_root": "/share/htdocs",
-      "default_conf": "default",
-      "default_ssl_conf": "default",
-      "website_name":null,
-      "ssl": true,
-      "certfile": "fullchain.pem",
-      "keyfile": "privkey.pem"
+      "tftproot": "/share/htdocs",
+      "networks": "default",
     },
     "schema": {
       "tftproot": "str",
       "networks": "str",
     },
     "ports": {
-      "69/udp": 80,
+      "69/udp": 69,
     },
     "ports_description": {
-      "69/urp": "Web interface http",
+      "69/udp": "TFTP port",
     }
   }

@@ -1,5 +1,5 @@
 #!/usr/bin/env bashio
 networks=$(bashio::config 'networks')
-port=$(bashio::config 'port')
+tftproot=$(bashio::config 'tftproot')
 echo "Starting tftpd..."
-exec /bin/bash
+exec /usr/sbin/in.tftpd --foreground --verbose --address :69 ${tftproot}

@@ -11,16 +11,16 @@
     "ingress": true,
     "options": {
       "tftproot": "/share/htdocs",
-      "networks": "default",
+      "networks": "default"
     },
     "schema": {
       "tftproot": "str",
-      "networks": "str",
+      "networks": "str"
     },
     "ports": {
-      "69/udp": 69,
+      "69/udp": 69
     },
     "ports_description": {
-      "69/udp": "TFTP port",
+      "69/udp": "TFTP port"
     }
   }

@@ -7,11 +7,10 @@
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "startup": "application",
     "boot": "auto",
-    "map": ["share:rw", "media:rw"],
-    "ingress": true,
+    "map": ["share:rw"],
     "options": {
-      "tftproot": "/share/htdocs",
-      "networks": "default"
+      "tftproot": "/share/tftp",
+      "networks": "0.0.0.0/0"
     },
     "schema": {
       "tftproot": "str",
